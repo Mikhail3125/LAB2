@@ -7,7 +7,7 @@ public class Pyramid extends Square {
 
     public Pyramid(int a, int h) {
         super(a);
-        this.h = h;
+        setH(h);
     }
 
     public int getH() {
@@ -15,7 +15,7 @@ public class Pyramid extends Square {
     }
 
     public void setH(int h) {
-        this.h = h;
+        this.h = (h > 0 ? h : new Random().nextInt(10) + 1);;
     }
 
     public static Pyramid generate(){

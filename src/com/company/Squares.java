@@ -30,15 +30,15 @@ public class Squares {
     }
 
     public void MinArea(){
-        int min = 150;
+        int min = this.squares.get(0).getArea();
         for (Square square : this.squares){
-            if (square.getA()*square.getA() < min){
-                min = square.getA()*square.getA();
+            if (square.getArea() < min){
+                min = square.getArea();
             }
         }
         System.out.println("\n\nКвадрат с минимальной площадью:\n");
         for (Square square : this.squares){
-            if (min == square.getA()*square.getA()){
+            if (min == square.getArea()){
                 System.out.println(square);
             }
         }
